@@ -1,0 +1,332 @@
+@font-face {
+  font-family: "archery";
+  src: url("../fonts/SF_Archery_Black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "archery";
+  src: url("../fonts/SF_Archery_Black_SC_Oblique-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "archery";
+  src: url("../fonts/SF_Archery_Black_Oblique-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "archery";
+  src: url("../fonts/SF_Archery_Black_SC-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --clr-text: #3f3f3f;
+  --clr-primary: #764981;
+  --clr-primary-dark: #4f3157;
+  --clr-accent: #265a95;
+  --clr-accent-dark: #183b64;
+
+  --ff-title: "archery", serif;
+  --ff-serif: "archery", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border;
+  font-family: var(--ff-serif);
+  color: var(--clr-text);
+  font-size: 1.25rem;
+  margin: 0;
+  text-align: center;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  padding: 3em 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-family: var(--ff-title);
+  line-height: 0.8;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+p {
+  margin-bottom: 0.85em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.section-title-small {
+  font-size: 3rem;
+}
+
+.section-title-small small {
+  font-size: 0.7em;
+  display: block;
+}
+
+.logo {
+  font-family: var(--ff-title);
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 1em 0 2em;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5em;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+nav a:hover nav a:focus {
+  color: var(--clr-accent);
+  text-decoration: underline;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 0.75em 2.5em;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0.5em 0;
+  border-radius: 0.35em;
+  min-width: 350px;
+  align-self: center;
+}
+
+.btn-primary {
+  background: var(--clr-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--clr-primary-dark);
+}
+
+.btn-accent {
+  background: var(--clr-accent);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background: var(--clr-accent-dark);
+}
+.hero {
+  background-color: rgb(139, 139, 139);
+  background-image: url(../images/mushrooms.jpg);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  padding: 6em 1em;
+}
+
+.about-me {
+  background: var(--clr-accent);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 0;
+}
+
+.about-me__intro {
+  background-color: rgb(139, 139, 139);
+  background-image: url(../images/mushrooms.jpg);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 3em 1em 1.5em;
+}
+
+.about-me__body {
+  padding: 1.5em 1em 3em;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.project {
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+  margin: 0.5em;
+  min-width: 250px;
+}
+
+.project:last-of-type {
+  margin-bottom: 2em;
+}
+.project__content {
+  padding: 1.5em;
+}
+
+.project__title {
+  color: var(--clr-primary);
+  font-size: 2.5rem;
+  margin: 0.5em;
+}
+
+footer {
+  background: var(--clr-primary-dark);
+  padding: 2em 1em;
+  color: white;
+}
+
+footer a {
+  color: inherit;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  padding: 0.75em;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 75px;
+}
+
+.social-link {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 1000px) {
+  section {
+    padding: 6em 1em;
+  }
+
+  .btn-group {
+    margin-top: 1em;
+    flex-direction: row;
+  }
+
+  .btn {
+    min-width: none;
+    max-width: 40px;
+  }
+  .btn + .btn {
+    margin-left: 1em;
+  }
+
+  .about-me {
+    flex-direction: row;
+  }
+
+  .about-me__intro,
+  .about-me__body {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 4em 2em;
+    justify-content: center;
+  }
+
+  .about-me__intro {
+    text-align: right;
+  }
+
+  .about-me__intro > * {
+    max-width: 27rem;
+    margin-left: auto;
+  }
+
+  .about-me__body {
+    text-align: left;
+  }
+
+  .about-me__body > * {
+    max-width: 27rem;
+    margin-right: auto;
+  }
+  .projects {
+    flex-direction: row;
+    max-width: 1200px;
+  }
+
+  .project {
+    margin: 0;
+    flex: 0 1 33%;
+  }
+
+  .project + .project {
+    margin-left: 1em;
+  }
+  .project:last-of-type {
+    margin-bottom: 0;
+  }
+}
